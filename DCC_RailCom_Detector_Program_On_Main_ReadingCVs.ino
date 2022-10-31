@@ -50,11 +50,11 @@ void loop()
   
   if (loopCount < 50)
   {
-    dccIdlePackets(1);
+    basicNormalPulses(10);
     readLocValues();
-    dccIdlePackets(1);
+    basicNormalPulses(10);
     readLocValues();
-    dccIdlePackets(1);
+    basicNormalPulses(10);
     loopCount++;
   }
 }
