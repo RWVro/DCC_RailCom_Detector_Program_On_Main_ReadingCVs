@@ -157,11 +157,13 @@ void IRAM_ATTR GPIO15ToLow()
 next :;
     }
   }
-  if (rxArrayCnt <= 2 | rxArrayCnt > 4)             // Save only arrays with 4 or more bytes
+  
+  if (rxArrayCnt != 4)                              // Save only arrays with 4 bytes
   {
     ClearRxArray();
     return;
   }
+  
   printRxArray();
   printRxArrayToBin();
   ClearRxArray();
